@@ -65,7 +65,9 @@ public class Coin {
 
     @Override
     public String toString() {
-        if (quantity > 1) {
+        if (name.equals("Dollar") || name.equals("Dollars")) {
+            return "$" + quantity;
+        } else if (quantity > 1) {
             return quantity + " " + nameplural;
         } else {
             return quantity + " " + name;
